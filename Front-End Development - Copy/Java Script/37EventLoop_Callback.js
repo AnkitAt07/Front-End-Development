@@ -15,4 +15,21 @@ setTimeout(function () {
 }, 0);
 
 
+
 console.log("Hii- 2");
+
+
+function fetchData(callback) {
+    console.log("Fetching data...");
+
+    setTimeout(() => {
+        let data = { id: 1, name: "Piyush" };
+        callback(data);
+    }, 3000);
+}
+
+function displayData(user) {
+    console.log("User Data:", user);
+}
+
+fetchData(displayData);
